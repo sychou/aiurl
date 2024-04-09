@@ -1,0 +1,24 @@
+{
+  "model": "gpt-3.5-turbo",
+  "response_format": {
+    "type": "json_object"
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful research assistant tasked with summarizing online content."
+    },
+    {
+      "role": "user",
+      "content": "Please provide a summary of the content provided using abstractive techniques. Ignore advertising content. Try to limit the summary to no more than 1000 characters and 4-6 bullet points."
+    },
+    {
+      "role": "user",
+      "content": "Respond with json using the provided schema for your response. The abstract should be 1-2 sentences and you can add additional bullets as needed.\n\n{ \"title\": \"string\", \"author\": \"string\", \"datePublished\": \"date\", \"abstract\": \"string\", \"summary\": [ { \"bullet\": \"string\" }, { \"bullet\": \"string\" }, { \"bullet\": \"string\" } ] }"
+    },
+    {
+      "role": "user",
+      "content": "{{content}}"
+    }
+  ]
+}
