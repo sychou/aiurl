@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+# README
+# - Modify the paths below as needed
+# - Copy this script to a location in your PATH, e.g. /usr/local/bin/aiurl
+
+# Define the path to your Python environment
+PYTHON_ENV="$HOME/src/aiurl/.venv/bin/python"
+
+# Define the full path to your aiurl.py script - excluding the script name
+SCRIPT_DIR="$HOME/src/aiurl/"
+
+# Change directory to the script directory
+cd $SCRIPT_DIR
+
+# Execute the reqai.py script, passing all arguments provided to this wrapper
+$PYTHON_ENV aiurl.py "$@"
+
+# Optionally, return to the previous directory if needed
+cd -
